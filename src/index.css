@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-glass-bg: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#000000] text-slate-100 min-h-screen antialiased;
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-glass-bg backdrop-blur-xl border border-glass-border shadow-2xl rounded-2xl;
+  }
+  
+  .neon-glow {
+    @apply shadow-[0_0_15px_rgba(168,85,247,0.4)];
+  }
+  
+  .neon-glow-strong {
+    @apply shadow-[0_0_25px_rgba(168,85,247,0.7)] border-purple-500/50;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400;
+  }
+}
